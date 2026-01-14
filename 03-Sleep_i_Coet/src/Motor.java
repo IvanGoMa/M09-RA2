@@ -52,9 +52,6 @@ public class Motor extends Thread {
                 System.out.printf("Motor %d: %s Objectiu: %d Actual: %d\n",this.numMotor,state,this.potenciaObjectiu,this.potenciaActual);
 
             }
-            if (potenciaObjectiu == 0 && potenciaActual == 0) {
-                break;
-            }
 
             try{
                 Thread.sleep(500);
