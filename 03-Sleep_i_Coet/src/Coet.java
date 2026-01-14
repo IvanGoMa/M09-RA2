@@ -36,6 +36,5 @@ public class Coet {
             target = Integer.parseInt(input.nextLine());
             coet.passaAPotencia(target);
         }
-        coet.passaAPotencia(0);
     }
 }
