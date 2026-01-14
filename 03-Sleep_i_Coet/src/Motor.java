@@ -33,8 +33,7 @@ public class Motor extends Thread {
     
     @Override
     public void run(){
-        boolean viu = true;
-        while(viu){
+        do{
             while (potenciaObjectiu != potenciaActual){
 
                 boolean incrementa = potenciaObjectiu > potenciaActual;
@@ -54,12 +53,14 @@ public class Motor extends Thread {
 
             }
             if (potenciaObjectiu == 0 && potenciaActual == 0) {
-                viu = false;
+                break;
             }
+
             try{
-            Thread.sleep(500);
+                Thread.sleep(500);
             } catch (Exception e){}
-        } 
+            
+        } while (!(potenciaActual ==0 && potenciaObjectiu== 0));
         
         
 
